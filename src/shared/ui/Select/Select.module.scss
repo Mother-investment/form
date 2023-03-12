@@ -1,0 +1,99 @@
+.Select {
+	background: linear-gradient(92.01deg, #ffffff05 -8.99%, #ffffff24 101.74%);
+	backdrop-filter: blur(20px);
+	border: 2px solid #ffffff81;
+	color: #e9e9e9f4;
+	border-radius: 5px;
+}
+
+.selectActive {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.control {
+	align-items: center;
+	display: flex;
+}
+
+.input {
+	border: none;
+	width: 100%;
+}
+
+.arrowContainer {
+	height:50px;
+	width: 40px;
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	padding: 0 8px;
+}
+
+.arrow {
+	fill: white;
+	transform: rotate(0deg);
+	transition: transform 0.8s;
+}
+
+.arrowActive {
+	transform: rotate(540deg);
+	transition: transform 0.8s;
+}
+
+.menu {
+	background: linear-gradient(92.01deg, #ffffff05 -8.99%, #ffffff24 101.74%);
+	backdrop-filter: blur(20px);
+	display: none;
+	max-height: 200px;
+	width: 100%;
+}
+
+.menuContainer {
+	background: linear-gradient(92.01deg, #ffffff05 -8.99%, #ffffff24 101.74%);
+	backdrop-filter: blur(20px);
+	margin: 10px 0;
+	max-height: 180px;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: linear-gradient(92.01deg, #ffffff05 -8.99%, #ffffff24 101.74%);
+		backdrop-filter: blur(20px);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: white;
+		border-radius: 20px;
+	}
+}
+
+.menuActive {
+	display: block;
+}
+
+.option {
+	cursor: pointer;
+	padding: 10px 10px;
+
+	&:hover {
+		background-color: #ffffff2c
+	}
+}
+
+.selectDisabled {
+	border: 1px solid gainsboro;
+
+	.input,
+	.arrowContainer {
+		cursor: default;
+	}
+
+	.arrow {
+		fill: gainsboro;
+	}
+}

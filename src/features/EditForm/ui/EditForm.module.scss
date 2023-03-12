@@ -1,0 +1,39 @@
+p {
+	margin-top: 10px;
+	color: red;
+}
+
+h1 {
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+span {
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+.EditForm {
+	padding: 30px;
+}
+
+.formItem + .formItem {
+	margin-top: 30px;
+}
+
+.btn {
+	margin: 50px 30px 30px 0;
+}
+
+.agreeInput {
+	margin-left: 5px;
+}
+
+.errorField {
+	border: 2px solid red !important;
+}
