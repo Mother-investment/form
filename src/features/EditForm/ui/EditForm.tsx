@@ -133,7 +133,6 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 								placeholder='День'
 								className={errors.dayBirth ? cls.errorField : ''}
 								value={value}
-								searchOff
 								options={dayBirth}
 								onChange={onChange}
 							/>
@@ -152,7 +151,6 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 								placeholder='Месяц'
 								className={errors.monthBirth ? cls.errorField : ''}
 								value={value}
-								searchOff
 								options={birthDate.months}
 								onChange={onChange}
 							/>
@@ -171,7 +169,6 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 								placeholder='Год'
 								className={errors.yearBirth ? cls.errorField : ''}
 								value={value}
-								searchOff
 								options={birthDate.years}
 								onChange={onChange}
 							/>
@@ -195,7 +192,6 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 								placeholder='Укажите пол'
 								className={errors.gender ? cls.errorField : ''}
 								value={value}
-								searchOff
 								options={getOptionsItems(OptionName.GENDER)}
 								onChange={onChange}
 							/>
