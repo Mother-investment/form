@@ -96,7 +96,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 					placeholder='Ведите имя'
 					register={register(
 						'firstName',
-						{required: true, maxLength: 50, pattern: /^[a-zа-яё]+$/i}
+						{required: true, maxLength: 50, pattern: /^[a-zа-яё\s]+$/i}
 					)}
 				/>
 				{errors.firstName?.type === 'required' && <p>Заполните поле!</p>}
@@ -111,7 +111,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 					placeholder='Ведите фамилию'
 					register={register(
 						'lastName',
-						{required: true, maxLength: 50, pattern: /^[a-zа-яё]+$/i}
+						{required: true, maxLength: 50, pattern: /^[a-zа-яё\s]+$/i}
 					)}
 				/>
 				{errors.lastName?.type === 'required' && <p>Заполните поле!</p>}
@@ -220,7 +220,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 					placeholder='Введите почту'
 					register={register(
 						'mail',
-						{pattern: /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i}
+						{pattern: /^\s*(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"\s]{2,})\s*$/i}
 					)}
 				/>
 				{errors.mail?.type === 'pattern' && <p>Нужно заполнить правильно!</p>}
