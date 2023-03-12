@@ -246,7 +246,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 			<div className={cls.formItem}>
 				<h2>Вы согласны отправить информацию?</h2>
 					<span>Да<input className={cls.agreeInput} {...register('agree', { required: true })} type='radio' value='Yes' checked={agreeValue === 'Yes'} /></span>
-					<span>Нет<input className={cls.agreeInput} {...register('agree', { required: true })} type='radio' value='No' checked={agreeValue === 'No' || agreeValue === ''} /></span>
+					<span>Нет<input className={cls.agreeInput} {...register('agree', { required: true })} type='radio' value='No' checked={agreeValue === 'No' || !agreeValue} /></span>
 			</div>
 
 
