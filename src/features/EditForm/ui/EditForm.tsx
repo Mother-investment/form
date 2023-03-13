@@ -50,7 +50,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 		reset,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<FormValues>({ mode: 'onChange' })
+	} = useForm<FormValues>({ mode: 'all' })
 
 
 	const birthDatValues = watch(['monthBirth', 'yearBirth'])
