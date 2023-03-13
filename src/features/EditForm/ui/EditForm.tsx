@@ -50,7 +50,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 		reset,
 		handleSubmit,
 		formState: { errors }
-	} = useForm<FormValues>({ mode: 'all' })
+	} = useForm<FormValues>({ mode: 'onChange' })
 
 
 	const birthDatValues = watch(['monthBirth', 'yearBirth'])
@@ -73,7 +73,7 @@ export const EditForm:React.FC<EditFormProps> = memo((props) => {
 
 	const onSubmit = () => {
 		onCloseModalAgree()
-		if(!Object.keys(errors).length) {
+		if(!Object.keys(errors).length && agreeValue) {
 			if(agreeValue && agreeValue === 'Yes') {
 				onShowModalSubmit()
 			}else if(agreeValue && agreeValue === 'No'){
